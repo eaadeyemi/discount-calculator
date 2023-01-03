@@ -11,8 +11,17 @@ function calculate() {
   afterDiscount = afterDiscount.toLocaleString();
   beforeDiscount = beforeDiscount.toLocaleString();
 
+  let errorMessage = "Enter valid number";
+
   document.querySelector("#after-discount").value = afterDiscount;
-  document.querySelector(
-    ".result-text"
-  ).innerHTML = `Your price after discount is ${afterDiscount}. You saved ${beforeDiscount}.`;
+
+  if (isNaN(afterDiscount)) {
+    document.querySelector(".result-text").innerHTML =
+      "Please enter a valid number";
+    document.querySelector("#after-discount").value = errorMessage;
+  } else {
+    document.querySelector(
+      ".result-text"
+    ).innerHTML = `Your price after ${discountValue}% discount is $${afterDiscount}. You saved $${beforeDiscount}.`;
+  }
 }
