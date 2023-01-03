@@ -1,14 +1,15 @@
 function calculate() {
   const initial = document.querySelector("#initial").value;
-  const initialValue = Number(initial);
+  let initialValue = Number(initial);
 
   const discount = document.querySelector("#discount").value;
-  const discountValue = Number(discount);
+  let discountValue = Number(discount);
 
-  const beforeDiscount = (initialValue * discountValue) / 100;
+  let beforeDiscount = (initialValue * discountValue) / 100;
   let afterDiscount = initialValue - beforeDiscount;
 
-  console.log(afterDiscount);
+  afterDiscount = afterDiscount.toLocaleString();
+  beforeDiscount = beforeDiscount.toLocaleString();
 
   document.querySelector("#after-discount").value = afterDiscount;
   document.querySelector(
