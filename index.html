@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="icon.png" />
+    <title>Discount Calculator</title>
+  </head>
+  <body>
+    <div class="text-wrapper">
+      <h1 class="header">Discount Calculator</h1>
+      <p class="sub-header">
+        The term discount can be used to refer to many forms of reduction in the
+        price of a good or service.
+      </p>
+    </div>
+    <div class="container">
+      <div class="calculator" loading="lazy">
+        <h2 class="calculator-header">
+          Please provide values below to calculate.
+        </h2>
+        <form onsubmit="return false">
+          <div class="input-group">
+            <label for="initial">Initial Price</label>
+            <input id="initial" type="text" />
+          </div>
+          <div class="input-group">
+            <label for="discount">Discount (%)</label>
+            <input id="discount" type="text" />
+          </div>
+          <div class="input-group">
+            <label for="after-discount">After Discount</label>
+            <input id="after-discount" type="text" />
+          </div>
+          <div class="buttons">
+            <input
+              type="submit"
+              value="Calculate"
+              id="submit"
+              onClick="calculate()"
+            />
+            <input type="reset" value="Clear" id="clear" />
+          </div>
+        </form>
+        <p class="result-text"></p>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
