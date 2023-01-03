@@ -15,7 +15,7 @@ function calculate() {
 
   document.querySelector("#after-discount").value = afterDiscount;
 
-  if (isNaN(afterDiscount)) {
+  if (isNaN(initialValue)) {
     document.querySelector(".result-text").innerHTML =
       "Please enter a valid number";
     document.querySelector("#after-discount").value = errorMessage;
